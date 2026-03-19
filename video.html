@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    Replace "your-video-file.mp4" with your actual video source.
+    Multiple <source> tags let you provide fallback formats.
+  -->
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    disablepictureinpicture
+    controlslist="nodownload nofullscreen noremoteplayback"
+  >
+    <source src="slideshow.mp4" type="video/mp4">
+    <source src="your-video-file.webm" type="video/webm">
+  </video>
+
+</body>
+</html>
